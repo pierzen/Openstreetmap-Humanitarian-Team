@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<featureGroup>
+  <feature name="ID">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+    <line/>
+	<tag k="id:uuid" v=" "/>
+	<inputSet ref="HOT ID" />
+  </feature>
+  <feature name="Name">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+    <line/>
+	<tag k="name" v=" "/>
+	<inputSet ref="HOT Name" />
+  </feature>
+  <feature name="Address">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="address:city" v=" "/>
+	<inputSet ref="HOT Address" />
+  </feature>
+  <feature name="Spatial Signature">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="pcode" v=" "/>
+	<inputSet ref="HOT Spatial Signature" />
+  </feature>
+  <feature name="Operating Institution">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="operator" v=" "/>
+	<tag k="operator_type" v=" "/>
+	<inputSet ref="HOT Operating Institution" />
+  </feature>
+  <feature name="Contact Information">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="phonebusiness" v=" "/>
+	<inputSet ref="HOT Contact Information" />
+  </feature>
+  <feature name="Humanitarian Use">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="humanitarian_use" v=" " vmatch="unspecified|primary_hub|secondary_hub|final_delivery_point|operationally_significant_location"/>
+      <choice value="primary_hub" text="primary_hub"/>
+      <choice value="secondary_hub" text="secondary_hub"/>
+      <choice value="final_delivery_point" text="final_delivery_point"/>
+      <choice value="operationally_significant_location" text="operationally_significant_location"/>
+      <choice value="unspecified" text="unspecified"/>
+
+	  <inputSet ref="HOT Humanitarian Use" />
+  </feature>
+  <feature name="Operational_status">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="Operational_status" v=" " vmatch="unspecified|open|restricted|closed"/>
+	<inputSet ref="HOT Operational_status" />
+  </feature>
+  <feature name="Surface">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <line/>
+	<tag k="Surface" v="unspecified" vmatch="unspecified|Paved|Gravel|Dirt/Sand"/>
+	<inputSet ref="HOT Surface" />
+  </feature>
+  <feature name="Practicability">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <line/>
+	<tag k="Practicability" v=" " vmatch="unspecified|non_motorized|motorbike|4wd_less_than_3.5mt|light_truck_less_than_10mt|heavy_truck_less_than_20mt|truck_+_trailer_greater_than_20mt"/>
+      <choice value="non_motorized" text="non_motorized"/>
+      <choice value="motorbike" text="motorbike"/>
+      <choice value="4wd_less_than_3.5mt" text="4wd_less_than_3.5mt"/>
+      <choice value="light_truck_less_than_10mt" text="light_truck_less_than_10mt"/>
+      <choice value="heavy_truck_less_than_20mt" text="heavy_truck_less_than_20mt"/>
+      <choice value="truck_+_trailer_greater_than_20mt" text="truck_+_trailer_greater_than_20mt"/>
+      <choice value="unspecified" text="unspecified"/>
+
+	<inputSet ref="HOT Practicability" />
+  </feature>
+  <feature name="Source">
+    <category>HOTFeaturesCommonTags</category>
+    <icon image="features/hot.png"/>
+    <point/>
+    <line/>
+	<tag k="Geometry_source_type" v=" "/>
+	<inputSet ref="HOT Source" />
+  </feature>
+</featureGroup>
