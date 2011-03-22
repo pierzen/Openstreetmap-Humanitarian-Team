@@ -3,7 +3,6 @@
 <title>HOT Custom Potlatch2 Presets : Development page</title>
 <script type="text/javascript" src="swfobject.js"></script>
 <link rel="shortcut icon" type="image/x-icon" href="images/hot.ico" />
-<!-- Potlatch 2 script Flash player You have version 10,1,102,64 installed -> 10.2.152.32 -->
 </head>
 
 <body>
@@ -40,10 +39,6 @@ Drag menus icons on the map or click on the map to create nodes, ways or areas. 
     }
 
     function markChanged(a) { changesaved=a; } /* called from flash */
-	/*
-	var xlat=18.5392;
-	var xlon=-72.335;
-	*/
 	var xlat=51.8762658;
 	var xlon=-1.4946779;
 	var args = getArgs();
@@ -78,40 +73,6 @@ Drag menus icons on the map or click on the map to create nodes, ways or areas. 
 	fo.addVariable("oauth_consumer_secret", "2nUl6gnntlJU8oMvWI3lJx7C1AYMgKCUcFegxeCMxY");
 	fo.addVariable("serverName", "api06 Dev Server");
 	fo.write("map");
-	/*
-	test for save http://api06.dev.openstreetmap.org/browse/node/5907819
-	var fo = new SWFObject("potlatch2.swf?d="+Math.round(Math.random()*1000), "map", "100%", "100%", "9", "#FFFFFF");
-	fo.addVariable("lat",lat);
-	fo.addVariable("lon",lon);
-	fo.addVariable("zoom",zoom);
-	fo.addVariable("api","http://api06.dev.openstreetmap.org/api/0.6/");
-	fo.addVariable("policy","http://api06.dev.openstreetmap.org/api/crossdomain.xml");
-	fo.addVariable("connection","XML");
-	fo.addVariable("oauth_policy", "http://api06.dev.openstreetmap.org/oauth/crossdomain.xml");
-	fo.addVariable("oauth_request_url", "http://api06.dev.openstreetmap.org/oauth/request_token");
-	fo.addVariable("oauth_access_url", "http://api06.dev.openstreetmap.org/oauth/access_token");
-	fo.addVariable("oauth_auth_url", "http://api06.dev.openstreetmap.org/oauth/authorize");
-	fo.addVariable("oauth_consumer_key", "kKsVEL4X0zdbil1kmq2fQ");
-	fo.addVariable("oauth_consumer_secret", "i9ebjCECaY5yPZ3DtxeoBYsMjhLp76s5qFhbBcdR1IE");
-	fo.addVariable("serverName", "api06 Test On Dev");
-	fo.write("map");
-	var fo = new SWFObject("potlatch2.swf?d="+Math.round(Math.random()*1000), "map", "100%", "100%", "9", "#FFFFFF");
-	fo.addVariable("lat",lat);
-	fo.addVariable("lon",lon);
-	fo.addVariable("zoom",zoom);
-	fo.addVariable("api","http://api06.dev.openstreetmap.org/api/0.6/");
-	fo.addVariable("policy","http://api06.dev.openstreetmap.org/api/crossdomain.xml");
-	fo.addVariable("connection","XML");
-	fo.addVariable("oauth_policy", "http://api06.dev.openstreetmap.org/oauth/crossdomain.xml");
-	fo.addVariable("oauth_request_url", "http://master.apis.dev.openstreetmap.org/oauth/request_token");
-	fo.addVariable("oauth_access_url", "http://master.apis.dev.openstreetmap.org/oauth/access_token");
-	fo.addVariable("oauth_auth_url", "http://master.apis.dev.openstreetmap.org/oauth/authorize");
-	fo.addVariable("oauth_consumer_key", "BlEIpR1picaQcrA8h9ovlg");
-	fo.addVariable("oauth_consumer_secret", "xwkRPejGdQKw17sG6LFSjmdqzICq8c0fvZR3WHOOqY");
-	fo.addVariable("serverName", "api06 Test On Dev");
-	fo.write("map");
-	2011-03-18
-	*/
 </script>
 </div>
 </body>
