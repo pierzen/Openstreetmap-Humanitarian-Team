@@ -1,15 +1,26 @@
+OPENSTREETMAP HUMANITARIAN TEAM DEVELOPMENT PROJECT
 CUSTOMIZED VERSION OF POTLATCH2 EDITOR WITH HUMANITARIAN PRESETS
-Project under development
+at http://pierzen.dev.openstreetmap.org/hotpotlatch2/
 
-This package includes the files necessary to customize the Potlatch2
-editor, adding the Humanitarian Presets to the menu items.
-A section at the end of map_features.xml contains features specific to Humanitarian tags.
+For the Development Phase, we edit on the api06.dev.openstreetmap.org
+server where there is minimal data for testing new Applications.
+You cannot save unless you have an account on the api06 Dev Server. 
+
+====================================================================
+Sources
+
+This repositories includes the source files necessary to customize the
+Potlatch2 editor, adding the Humanitarian Presets to the menu items.
+A section at the end of map_features.xml contains features specific to
+Humanitarian tags.
 
 Dependencies :
 The files have to be copied in the root of a fresh installation
 of the Potlach2 Editor.
 
-To test un api6.dev.openstreetmap.org Server :
+CUSTOM HOTPOTLATCH2 at 
+
+To test on api6.dev.openstreetmap.org Server :
 - Open an account on that server
 - Register the customized version of Potlach2 under Settings /Oauth.
 - Indicate latitude and longitude coordinates for an area where there
