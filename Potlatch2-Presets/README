@@ -1,9 +1,11 @@
-CUSTOMIZED VERSION OF POTLACH2 EDITOR WITH HUMANITARIAN PRESETS
+CUSTOMIZED VERSION OF POTLATCH2 EDITOR WITH HUMANITARIAN PRESETS
 Project under development
 
 This package includes the files necessary to customize the Potlatch2
 editor, adding the Humanitarian Presets to the menu items.
 A section at the end of map_features.xml contains features specific to Humanitarian tags.
+
+Dependencies :
 The files have to be copied in the root of a fresh installation
 of the Potlach2 Editor.
 
