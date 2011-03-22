@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>HOT Custom Potlatch2 Presets : Development page</title>
+<script type="text/javascript" src="swfobject.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="images/hot.ico" />
+<!-- Potlatch 2 script Flash player You have version 10,1,102,64 installed -> 10.2.152.32 -->
+</head>
+
+<body>
+<h2 style="text-align:center;color:#23819C;margin:0;padding:0;">
+<img src="features/hot.png" alt="HOT" style="height:26px;" />
+ Custom Potlatch2 Presets v0.1</h2>
+<p style="color:purple;font-style:italic;font-size:small;text-align:center;">For the Development Phase, we edit on the api06.dev.openstreetmap.org server where there is minimal data for testing new Applications. 
+Drag menus icons on the map or click on the map to create nodes, ways or areas. You cannot save unless you have an account on the api06 Dev Server.
+</p>
+<div id="map" style="width:100%; height: 85%; border: 1px solid black">
+</div>
+<div>
+<script>
+	function getArgs() {
+		var args = new Object();
+		var query = location.search.substring(1);
+		var pairs = query.split("&");
+		for(var i = 0; i < pairs.length; i++) {
+			var pos = pairs[i].indexOf('=');
+			if (pos == -1) continue;
+			var argname = pairs[i].substring(0,pos);
+			var value = pairs[i].substring(pos+1);
+			args[argname] = unescape(value);
+		}
+		return args;
+	}
+
+    var changesaved=false;
+  
+    window.onbeforeunload=function() {
+        if (!changesaved) {
+            return 'You have unsaved changes. You need to press the Save button to save them';
+        }
+    }
+
+    function markChanged(a) { changesaved=a; } /* called from flash */
+	/*
+	var xlat=18.5392;
+	var xlon=-72.335;
+	*/
+	var xlat=51.8762658;
+	var xlon=-1.4946779;
+	var args = getArgs();
+	var lat;
+	var lon;
+	var zoom;
+	if (args.lat && args.lon) {
+		lat = parseFloat(args.lat);
+		lon = parseFloat(args.lon);
+	} else {
+		lat=xlat;
+		lon=xlon;
+	}
+
+	if (args.zoom) {
+		zoom = parseInt(args.zoom);
+	} else {
+		zoom = 16;
+	}
+	var fo = new SWFObject("potlatch2.swf?d="+Math.round(Math.random()*1000), "map", "100%", "100%", "9", "#FFFFFF");
+	fo.addVariable("lat",lat);
+	fo.addVariable("lon",lon);
+	fo.addVariable("zoom",zoom);
+	fo.addVariable("api","http://api06.dev.openstreetmap.org/api/0.6/");
+	fo.addVariable("policy","http://api06.dev.openstreetmap.org/api/crossdomain.xml");
+	fo.addVariable("connection","XML");
+	fo.addVariable("oauth_policy", "http://api06.dev.openstreetmap.org/oauth/crossdomain.xml");
+	fo.addVariable("oauth_request_url", "http://api06.dev.openstreetmap.org/oauth/request_token");
+	fo.addVariable("oauth_access_url", "http://api06.dev.openstreetmap.org/oauth/access_token");
+	fo.addVariable("oauth_auth_url", "http://api06.dev.openstreetmap.org/oauth/authorize");
+	fo.addVariable("oauth_consumer_key", "qyvZw5escsVhPPqISu2Fg");
+	fo.addVariable("oauth_consumer_secret", "2nUl6gnntlJU8oMvWI3lJx7C1AYMgKCUcFegxeCMxY");
+	fo.addVariable("serverName", "api06 Dev Server");
+	fo.write("map");
+	/*
+	test for save http://api06.dev.openstreetmap.org/browse/node/5907819
+	var fo = new SWFObject("potlatch2.swf?d="+Math.round(Math.random()*1000), "map", "100%", "100%", "9", "#FFFFFF");
+	fo.addVariable("lat",lat);
+	fo.addVariable("lon",lon);
+	fo.addVariable("zoom",zoom);
+	fo.addVariable("api","http://api06.dev.openstreetmap.org/api/0.6/");
+	fo.addVariable("policy","http://api06.dev.openstreetmap.org/api/crossdomain.xml");
+	fo.addVariable("connection","XML");
+	fo.addVariable("oauth_policy", "http://api06.dev.openstreetmap.org/oauth/crossdomain.xml");
+	fo.addVariable("oauth_request_url", "http://api06.dev.openstreetmap.org/oauth/request_token");
+	fo.addVariable("oauth_access_url", "http://api06.dev.openstreetmap.org/oauth/access_token");
+	fo.addVariable("oauth_auth_url", "http://api06.dev.openstreetmap.org/oauth/authorize");
+	fo.addVariable("oauth_consumer_key", "kKsVEL4X0zdbil1kmq2fQ");
+	fo.addVariable("oauth_consumer_secret", "i9ebjCECaY5yPZ3DtxeoBYsMjhLp76s5qFhbBcdR1IE");
+	fo.addVariable("serverName", "api06 Test On Dev");
+	fo.write("map");
+	var fo = new SWFObject("potlatch2.swf?d="+Math.round(Math.random()*1000), "map", "100%", "100%", "9", "#FFFFFF");
+	fo.addVariable("lat",lat);
+	fo.addVariable("lon",lon);
+	fo.addVariable("zoom",zoom);
+	fo.addVariable("api","http://api06.dev.openstreetmap.org/api/0.6/");
+	fo.addVariable("policy","http://api06.dev.openstreetmap.org/api/crossdomain.xml");
+	fo.addVariable("connection","XML");
+	fo.addVariable("oauth_policy", "http://api06.dev.openstreetmap.org/oauth/crossdomain.xml");
+	fo.addVariable("oauth_request_url", "http://master.apis.dev.openstreetmap.org/oauth/request_token");
+	fo.addVariable("oauth_access_url", "http://master.apis.dev.openstreetmap.org/oauth/access_token");
+	fo.addVariable("oauth_auth_url", "http://master.apis.dev.openstreetmap.org/oauth/authorize");
+	fo.addVariable("oauth_consumer_key", "BlEIpR1picaQcrA8h9ovlg");
+	fo.addVariable("oauth_consumer_secret", "xwkRPejGdQKw17sG6LFSjmdqzICq8c0fvZR3WHOOqY");
+	fo.addVariable("serverName", "api06 Test On Dev");
+	fo.write("map");
+	2011-03-18
+	*/
+</script>
+</div>
+</body>
+</html>
+
