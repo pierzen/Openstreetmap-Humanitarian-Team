@@ -3,7 +3,7 @@
 <meta charset='utf-8'>
 </head>
 <body>
-<h2>CUSTOMIZED VERSION OF POTLATCH2 EDITOR WITH HUMANITARIAN PRESETS</h2>
+<h2>Customized Version of Potlatch2 Editor with Humanitarian Presets</h2>
 <h3>Project in development</h3>
 <p>Test Version at <a href="http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html">http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html</a>
 </p>
