@@ -1,13 +1,12 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset='utf-8'>
 </head>
 <body>
-<h2>OPENSTREETMAP HUMANITARIAN TEAM DEVELOPMENT PROJECT
-CUSTOMIZED VERSION OF POTLATCH2 EDITOR WITH HUMANITARIAN PRESETS</h2>
-<div>at http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html</div>
-
+<h2>CUSTOMIZED VERSION OF POTLATCH2 EDITOR WITH HUMANITARIAN PRESETS</h2>
+<h3>Project in development</h3>
+<p>Test Version at <a href="http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html">http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html</a>
+</p>
 <p>For the Development Phase, we edit on the api06.dev.openstreetmap.org
 server where there is minimal data for testing new Applications.
 You cannot save unless you have an account on the api06 Dev Server.</p> 
@@ -38,6 +37,6 @@ of the Potlach2 Editor.</p>
 <li><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Deploying_Potlatch_2">Potlatch2 Install Instructions</a></li>
 <li><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2/Developer_Documentation/Map_Features">Potlatch2 Presets Syntax</a></li>
 </ul>
-====================================================================
+<hr></hr>
 </body>
 </html>
