@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='utf-8'?>
+<featureGroup>
+  <feature name="Shelter Type">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+    <area/>
+    <tag k="amenity:hot" v="shelter_type"/>
+    <input type="choice" presence="always" name="Shelter Type" key="amenity" category="Shelter" delete_if_empty="true">
+      <choice value="shelter" text="shelter"/>
+      <choice value="water_proof_shelter" text="water_proof_shelter"/>
+      <choice value="communal_cooking_area" text="communal_cooking_area"/>
+    </input>
+	<inputSet ref="HOT Source" />
+  </feature>
+  <!-- integrated into Silo/Tank, manmade.xml
+  <feature name="Spring">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="natural:hot" v="spring" />
+    <input type="freetext" category="HOT | Water source" key="natural" presence="onTagMatch" name="NoText" description="Spring"/>
+	<inputSet ref="HOT Water Source" />
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Drinking Water">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="amenity:hot" v="drinking_water" />
+    <input type="freetext" category="HOT | Water source" key="amenity" presence="onTagMatch" name="NoText" description="Drinking Water"/>
+	<inputSet ref="HOT Water Source" />
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Tank">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="man_made:hot" v="tank" />
+    <input type="freetext" category="HOT | Water source" key="man_made" presence="onTagMatch" name="NoText" description="Tank"/>
+	<inputSet ref="HOT Water Source" />
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Reservoir">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="man_made:hot" v="reservoir" />
+   <input type="freetext" category="HOT | Water source" key="landuse" presence="onTagMatch" name="NoText" description="Reservoir"/>
+	<inputSet ref="HOT Water Source" />
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Bladder">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="man_made:hot" v="bladder" />
+   <input type="freetext" category="HOT | Water source" key="man_made" presence="onTagMatch" name="NoText" description="Bladder"/>
+	<inputSet ref="HOT Water Source" />
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Water Well">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="man_made:hot" v="water well" />
+    <input type="freetext" category="HOT | Water source" key="man_made" presence="onTagMatch" name="NoText" description="Water Well"/>
+	<inputSet ref="HOT Water Source" />
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Borehole">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="man_made:hot" v="borehole" />
+    <input type="freetext" category="HOT | Water source" key="man_made" presence="onTagMatch" name="NoText" description="Borehole"/>
+	<inputSet ref="HOT Water Source" />
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  -->
+  <feature name="Toilets">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="amenity:hot" v="toilets" />
+    <input type="freetext" category="Toilets" key="amenity" presence="onTagMatch" name="toilet" description=""/>
+    <input type="choice" presence="always" name="Access" key="gender" category="Toilets" delete_if_empty="true">
+      <choice value="male" text="male"/>
+      <choice value="female" text="female"/>
+      <choice value="disabled" text="disabled"/>
+    </input>
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Shower">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="amenity:hot" v="shower" />
+    <input type="freetext" category="Shower" key="amenity" presence="onTagMatch" name="shower" description=""/>
+    <input type="choice" presence="always" name="Access" key="gender" category="Shower" delete_if_empty="true">
+      <choice value="male" text="male"/>
+      <choice value="female" text="female"/>
+      <choice value="disabled" text="disabled"/>
+    </input>
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Land Fill">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="landuse:hot" v="land fill" />
+    <input type="freetext" category="Land Fill" key="landuse" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Waste Basket">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="amenity:hot" v="waste basket" />
+    <input type="freetext" category="Waste Basket" key="amenity" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Waste Disposal">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="amenity:hot" v="waste disposal" />
+    <input type="freetext" category="Waste Disposal" key="amenity" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Community Information Kiosk">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="amenity:hot" v="community_information_kiosk" />
+    <input type="freetext" category="Community Information Kiosk" key="amenity" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Information">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="tourism:hot" v="information" />
+    <input type="freetext" category="Information" key="tourism" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Information Board">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="information:hot" v="information board" />
+    <input type="freetext" category="Information Board" key="information" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Communal Cooking Area">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="amenity:hot" v="communal_cooking_area" />
+    <input type="freetext" category="Communal Cooking Area" key="amenity" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Camp Resident Committee">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="office:hot" v="camp_resident_commitee" />
+    <input type="freetext" category="Camp Resident Committee" key="office" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Shelter">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<!--
+	<tag k="amenity:hot" v="shelter" />
+    <input type="freetext" category="Shelter" key="amenity" presence="onTagMatch" name="NoText" description=""/>
+  -->
+    <tag k="amenity" v="shelter" vmatch="shelter|camp_resident_commitee|communal_cooking_area"/>
+    <input type="choice" key="amenity" name="Shelter" presence="always" priority="highest">
+      <choice value="shelter" text="shelter"/>
+      <choice value="camp_resident_commitee" text="camp_resident_commitee"/>
+      <choice value="communal_cooking_area" text="communal_cooking_area"/>
+    </input>
+	<inputSet ref="HOT Source" />
+  </feature>
+
+  <feature name="Tent">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="amenity:hot" v="tent" />
+    <input type="freetext" category="Tent" key="amenity" presence="onTagMatch" name="NoText" description=""/>
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Hazard Mitigation Infrastructure">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="man_made:hot" v="drainage" />
+    <input type="freetext" category="Drainage" key="manmade" presence="onTagMatch" name="drainage" description=""/>
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <feature name="Hazards">
+    <category>HOTIOMKiosk</category>
+    <icon image="features/hot.png"/>
+    <point/>
+	<tag k="natural:hot" v="hazard" />
+	<inputSet ref="HOT Hazards" />
+	<inputSet ref="HOT Source" />
+  </feature>
+</featureGroup>

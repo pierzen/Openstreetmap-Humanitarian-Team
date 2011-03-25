@@ -1,34 +1,55 @@
 <?xml version='1.0' encoding='utf-8'?>
 <featureGroup>
+
   <feature name="IDP Camp">
     <category>HOTFeatures</category>
-    <icon image="features/hot.png">
+	<icon image="features/pois/hot_camping.n.24.png">
       <font size="16pt"><b>${name}</b></font><br/>
       <font size="10pt">${address:city}</font>
     </icon>
     <point/>
+    <tag k="tourism" v="camp_site"/>
 	<tag k="camp" v="yes"/>
-	<tag k="camp_management_agency" v="unspecified"  vmatch="unspecified|yes|no" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT IDP Contact Information" />
+    <inputSet ref="HOT IDP Camp Site" />
+	<inputSet ref="HOT Operational_status" />
+	<inputSet ref="HOT Spatial Signature" />
 	<inputSet ref="HOT ID" />
-	<inputSet ref="HOT Name" />
+	<inputSet ref="HOT Address" />
+	<inputSet ref="HOT Source" />
+  </feature>
+  <!-- moved from amenities.xml + hot features -->
+  <feature name="School">
+    <category>HOTFeatures</category>
+    <icon image="features/pois/hot_education_school.n.24.png">
+      <font size="16pt"><b>${name}</b></font><br/>
+      <font size="10pt">${address:city}</font>
+    </icon>
+    <point/>
+	<tag k="amenity" v="school" />
+	<inputSet ref="HOT Building" />
+	<inputSet ref="HOT ID" />
 	<inputSet ref="HOT Address" />
 	<inputSet ref="HOT Spatial Signature" />
 	<inputSet ref="HOT Operating Institution" />
 	<inputSet ref="HOT Contact Information" />
-    <inputSet ref="HOT IDP Camp Site" />
+	<inputSet ref="HOT  School" />
 	<inputSet ref="HOT Operational_status" />
 	<inputSet ref="HOT Source" />
   </feature>
+  <!-- moved from buildings.xml + hot features -->
   <feature name="School">
     <category>HOTFeatures</category>
-    <icon image="features/hot.png">
-      <font size="16pt"><b>${name}</b></font><br/>
-      <font size="10pt">${address:city}</font>
+    <icon image="features/pois/hot_education_school.n.24.png">
+      <b>${name} ${addr:housename}</b><br/>
+      ${addr:housenumber} ${addr:street} ${addr:postcode}
     </icon>
-    <point/>
-	<tag k="amenity:hot" v="school" />
+    <area/>
+    <tag k="amenity" v="school"/>
+    <inputSet ref="isBuilding"/>
+	<inputSet ref="HOT Building" />
 	<inputSet ref="HOT ID" />
-	<inputSet ref="HOT Name" />
 	<inputSet ref="HOT Address" />
 	<inputSet ref="HOT Spatial Signature" />
 	<inputSet ref="HOT Operating Institution" />
@@ -47,17 +68,25 @@
 	<tag k="classe" v="unspecified" match="conduite|ligne_electrique|poste_transformation|pylone"/>
 	<inputSet ref="HOT Electricy network" />
   </feature>
+  
+  <!-- moved from amenities.xml + hot features -->
   <feature name="Health Facilities">
     <category>HOTFeatures</category>
-    <icon image="features/hot.png">
+    <icon image="features/pois/hot_health_hospital.n.24.png">
       <font size="16pt"><b>${name}</b><br />${type}</font><br/>
       <font size="10pt">${address:city}</font>
     </icon>
+    <help>http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dhospital</help>
     <point/>
     <area/>
-	<tag k="amenity:hot" v="hospital" />
+	<tag k="amenity" v="hospital" />
+    <inputSet ref="simpleName"/>
+    <input type="choice" presence="always" category="HOT | Health Facility" name="Emergency treatment available" key="emergency" description="Are there accident and emergency facilities at this hospital?">
+      <choice value="yes" text="Yes"/>
+      <choice value="no" text="No"/>
+    </input>
+	<inputSet ref="HOT Building" />
 	<inputSet ref="HOT ID" />
-	<inputSet ref="HOT Name" />
 	<inputSet ref="HOT Address" />
 	<inputSet ref="HOT Spatial Signature" />
 	<inputSet ref="HOT Operating Institution" />
@@ -65,6 +94,27 @@
 	<inputSet ref="HOT Health Facility Type" />
     <inputSet ref="HOT Source" />
   </feature>
+  <!-- moved from buildings.xml + hot features -->
+  <feature name="Hospital">
+    <category>buildings</category>
+    <icon image="features/pois/hot_health_hospital.n.24.png">
+      <b>${name} ${addr:housename}</b><br/>
+      ${addr:housenumber} ${addr:street} ${addr:postcode}
+    </icon>
+    <line/>
+    <area/>
+    <tag k="amenity" v="hospital"/>
+    <inputSet ref="isBuilding"/>
+	<inputSet ref="HOT Building" />
+	<inputSet ref="HOT ID" />
+	<inputSet ref="HOT Address" />
+	<inputSet ref="HOT Spatial Signature" />
+	<inputSet ref="HOT Operating Institution" />
+	<inputSet ref="HOT Contact Information" />
+	<inputSet ref="HOT Health Facility Type" />
+    <inputSet ref="HOT Source" />
+  </feature>
+  <!-- integrated in roads.xml
   <feature name="Roads">
     <category>HOTFeatures</category>
     <icon image="features/hot.png">
@@ -73,9 +123,8 @@
     </icon>
     <line/>
 	<tag  k="highway:hot"  v="road"	vmatch="primary|secondary|tertiary|footway|track|unspecified"	/>
-	<inputSet ref="HOT Road type" />
+	<inputSet ref="HOT Road conditions" />
 	<inputSet ref="HOT Operational_status" />
-	<inputSet ref="HOT Roads" />
 	<inputSet ref="HOT Practicability" />
     <inputSet ref="HOT Source" />
   </feature>
@@ -92,15 +141,17 @@
 	<inputSet ref="HOT Practicability" />
     <inputSet ref="HOT Source" />
   </feature>
+  -->
   <feature name="WaterPoint">
     <category>HOTFeatures</category>
-    <icon image="features/hot.png">
+    <icon image="features/pois/hot_food_drinkingtap.n.24.png">
       <font size="16pt"><b>${name}</b></font><br/>
       <font size="10pt">${Waterpoint Type}</font>
     </icon>
     <point/>
+	<tag k="amenity" v="drinking_water"/>
 	<tag k="man_made" v="unspecified"  vmatch="tap|well|tank|bladder|unspecified"/>
-    <inputSet ref="HOT WaterPoint" />
+    <inputSet ref="HOT Water Source" />
     <inputSet ref="HOT Source" />
   </feature>
 </featureGroup>

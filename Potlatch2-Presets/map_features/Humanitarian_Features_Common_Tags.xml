@@ -1,20 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <featureGroup>
-  <feature name="ID">
+  <feature name="ID, Names">
     <category>HOTFeaturesCommonTags</category>
     <icon image="features/hot.png"/>
     <point/>
     <line/>
 	<tag k="id:uuid" v=" "/>
 	<inputSet ref="HOT ID" />
-  </feature>
-  <feature name="Name">
-    <category>HOTFeaturesCommonTags</category>
-    <icon image="features/hot.png"/>
-    <point/>
-    <line/>
-	<tag k="name" v=" "/>
-	<inputSet ref="HOT Name" />
   </feature>
   <feature name="Address">
     <category>HOTFeaturesCommonTags</category>
