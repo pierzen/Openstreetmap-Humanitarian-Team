@@ -4,8 +4,8 @@
 </head>
 <body>
 <h2>Customized Version of Potlatch2 Editor with Humanitarian Presets</h2>
-<h3>Project in development</h3>
-<p>Test Version at <a href="http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html">http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html</a>
+<h3>Project under Development</h3>
+<p>Working copy of Customized Potlatch2 at <a href="http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html">http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html</a>
 </p>
 <p>For the Development Phase, we edit on the api06.dev.openstreetmap.org
 server where there is minimal data for testing new Applications.
@@ -19,7 +19,7 @@ Potlatch2 editor, adding the Humanitarian Presets to the menu items.
 A section at the end of map_features.xml contains features specific to
 Humanitarian tags.</p> 
 
-<h3> Dependencies :</h3> 
+<h3> Installation instructions :</h3> 
 <p>The files have to be copied in the root of a fresh installation
 of the Potlach2 Editor.</p> 
 
