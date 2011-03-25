@@ -19,7 +19,7 @@ Potlatch2 editor, adding the Humanitarian Presets to the menu items.
 A section at the end of map_features.xml contains features specific to
 Humanitarian tags.</p> 
 
-<h3> Installation instructions :</h3> 
+<h3>Installation instructions :</h3> 
 <p>The files have to be copied in the root of a fresh installation
 of the Potlach2 Editor.</p> 
 
