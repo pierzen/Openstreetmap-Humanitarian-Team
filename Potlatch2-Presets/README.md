@@ -5,7 +5,8 @@
 <body>
 <h2>Customized Version of Potlatch2 Editor with Humanitarian Presets</h2>
 <h3>Project under state of Evaluation</h3>
-<p>Editing with the API is now on the main OSM Server. Below is the url to Edit using the API. The example shows parameters for latitude, longitude and zoom.<br /><a href="http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html">http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html?lat=38.2803&lon=140.87313&zoom=16</a>
+<p>The HOT Presets added to the Potlatch2 menus are derived from the <a href="https://github.com/wonderchook/OpenStreetMap-Humanitarian-Tags/blob/master/humanitarian_presets_josm.xml">HDM-aligned JOSM Preset files</a>.</p>
+<p>Note that the Custom API now edits on the main OSM Server. Below is the url to Edit using the API. The example shows parameters for latitude, longitude and zoom.<br /><a href="http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html">http://pierzen.dev.openstreetmap.org/hotpotlatch2/potlatch2.html?lat=38.2803&lon=140.87313&zoom=16</a>
 </p>
 <p>In this version of the API, Campsite, School and Hospital Features have been moved to the Humanitarian Features Group to facilitate editing for crisis events.</p>
 <ul>
