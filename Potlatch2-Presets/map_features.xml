@@ -1,3 +1,5 @@
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Quick documentation:
@@ -74,8 +76,6 @@ Quick documentation:
   <category name="Sport and Leisure" id="sport"/>
   <category name="Man-made" id="manmade"/>
   <category name="Humanitarian Features" id="HOTFeatures"/>
-  <category name="Humanitarian Features - Common Tags" id="HOTFeaturesCommonTags"/>
-  <category name="Humanitarian Features - IOM Kiosk" id="HOTIOMKiosk"/>
 
   <!-- Common input sets -->
 
@@ -642,39 +642,20 @@ Quick documentation:
 </inputSet>
 <!-- structure as copied from springmeyer JOSM at https://github.com/hotosm/presets/blob/master/hdm_presets_3.xml-->
 <inputSet id="HOT Spatial Signature">
-    <input type="freetext" category="HOT | Spatial Signature" key="pcode" presence="onTagMatch" name="s1. PCODE" description=""/>
-    <input type="freetext" category="HOT | Spatial Signature" key="boundary_admin_level1_name" presence="onTagMatch" name="s2. Boundary Admin Level=1" description=""/>
-    <input type="freetext" category="HOT | Spatial Signature" key="boundary_admin_level2_name" presence="onTagMatch" name="s3. Boundary Admin Level=2" description=""/>
-    <input type="freetext" category="HOT | Spatial Signature" key="boundary_admin_level3_name" presence="onTagMatch" name="s4. Boundary Admin Level=3" description=""/>
-    <input type="freetext" category="HOT | Spatial Signature" key="boundary_admin_level4_name" presence="onTagMatch" name="s5. Boundary Admin Level=4" description=""/>
-    <input type="freetext" category="HOT | Spatial Signature" key="place:area" presence="onTagMatch" name="s6. Place:Area Name" description=""/>
-    <input type="freetext" category="HOT | Spatial Signature" key="place:area-alternate" presence="onTagMatch" name="s7. Place:Area - Alternate Name" description=""/>
-    <input type="freetext" category="HOT | Spatial Signature" key="description" presence="onTagMatch" name="s8. Location Description" description=""/>
-    <input type="freetext" category="HOT | Spatial Signature" key="place:nearestlandmark" presence="onTagMatch" name="s9. Nearest Landmark" description=""/>
-</inputSet>
-<!-- modification of structure with checkbox and input choice 
-<inputSet id="HOT Spatial Signature">
     <input type="freetext" category="Spatial Signature" key="pcode" presence="onTagMatch" name="s01. PCODE" description=""/>
-    <input type="checkbox" category="Spatial Signature" key="boundary" value="administrative" presence="onTagMatch" name="s02. boundary=administrative" description=""/>
-    <input type="choice" category="Spatial Signature" key="admin_level" presence="onTagMatch" name="s03. Boundary Admin Level" description="Admin Level to wich this boundary apply" default="unspecified" delete_if_empty="true">/>
-      <choice value="1" text="admin_level=1"/>
-      <choice value="2" text="admin_level=2"/>
-      <choice value="3" text="admin_level=3"/>
-      <choice value="4" text="admin_level=4"/>
-    </input>
+    <input type="freetext" category="Spatial Signature" key="boundary=administrative" presence="onTagMatch" name="s02. boundary=administrative" description=""/>
+    <input type="freetext" category="Spatial Signature" key="admin_level=1" presence="onTagMatch" name="s03. Admin Level=1" description=""/>
+    <input type="freetext" category="Spatial Signature" key="boundary=administrative" presence="onTagMatch" name="s04. boundary=administrative" description=""/>
+    <input type="freetext" category="Spatial Signature" key="admin_level=2" presence="onTagMatch" name="s05. Admin Level=2" description=""/>
+    <input type="freetext" category="Spatial Signature" key="boundary=administrative" presence="onTagMatch" name="s06. boundary=administrative" description=""/>
+    <input type="freetext" category="Spatial Signature" key="admin_level=3" presence="onTagMatch" name="s07. Admin Level=3" description=""/>
+    <input type="freetext" category="Spatial Signature" key="boundary=administrative" presence="onTagMatch" name="s08. boundary=administrative" description=""/>
+    <input type="freetext" category="Spatial Signature" key="admin_level=4" presence="onTagMatch" name="s09. Admin Level=4" description=""/>
     <input type="freetext" category="Spatial Signature" key="place:area" presence="onTagMatch" name="s10. Place:Area" description=""/>
     <input type="freetext" category="Spatial Signature" key="place:area-alternate" presence="onTagMatch" name="s11. Place:Area - Alternate Name" description=""/>
     <input type="freetext" category="Spatial Signature" key="description" presence="onTagMatch" name="s12. Location Description" description=""/>
     <input type="freetext" category="Spatial Signature" key="place:nearestlandmark" presence="onTagMatch" name="s13. Nearest Landmark" description=""/>
 </inputSet>
-<combo key="building" text="*Building" values="yes,building_concrete,building_sheet_metal,building_wood,shelter,waterproof_shelter,non_waterproof_shelter,tent,no"/>
-<text key="hfac_construction_description" text="Description de la construction"/>
-<combo key="damage_status" text="Dommages" values="destroyed,damaged,unspecified" display_values="Detruit,Endommage,Non precise"/>
-<text key="hfac_capacity_description" text="Description de la capacite"/>
-<text key="hfac_beds" text="* Nombre de lits"/>
-<text key="hfac_current_floor_space_use" text="* Surface au sol utilisee dans l'enceinte de la structure"/>
-<text key="hfac_max_floor_space_use" text="* Surface au sol maximale utilisable dans l'enceinte de la structure"/>
- -->
 <inputSet id="HOT Building">
     <input type="choice" presence="always" name="Building" key="building" category="HOT | Building" delete_if_empty="true">
       <choice value="yes" text="yes"/>
@@ -699,11 +680,10 @@ Quick documentation:
     <input type="freetext" category="HOT | Operator" key="operator id" presence="onTagMatch" name="Operator ID" description=""/>
 </inputSet>
 <inputSet id="HOT Contact Information">
-		<input type="freetext" category="HOT | Contacts" key="contact_person" presence="onTagMatch" name="c1. Contact Person" description=""/>
 		<input type="freetext" category="HOT | Contacts" key="phonebusiness" presence="onTagMatch" name="c2. Phone - Business" description=""/>
 		<input type="freetext" category="HOT | Contacts" key="phoneemergency" presence="onTagMatch" name="c3. Phone - Emergency" description=""/>
 		<input type="freetext" category="HOT | Contacts" key="email" presence="onTagMatch" name="c4. Email" description=""/>
-		<input type="freetext" category="HOT | Contacts" key="fax" presence="onTagMatch" name="c5. Fax" description=""/>
+		<input type="freetext" category="HOT | Contacts" key="fax:" presence="onTagMatch" name="c5. Fax" description=""/>
 </inputSet>
 <inputSet id="HOT Humanitarian Use">
     <input type="choice" presence="always" name="Humanitarian Use" key="humanitarian_use" category="HOT | Humanitarian Use" delete_if_empty="true">
@@ -715,25 +695,23 @@ Quick documentation:
     </input>
 </inputSet>
 <inputSet id="HOT Operational_status">
-    <input type="choice" presence="always" name="Operational Status" key="operational_status" category="HOT | Operator" delete_if_empty="true">
+    <input type="choice" presence="always" name="Operational Status" key="Operational_status" category="HOT | Operator" delete_if_empty="true">
       <choice value="open" text="open"/>
       <choice value="restricted" text="restricted"/>
       <choice value="closed" text="closed"/>
       <choice value="unspecified" text="unspecified"/>
     </input>
-    <input type="choice" presence="always" name="Quality of Op. Status Info" key="operational_status_quality" category="HOT | Operator" delete_if_empty="true">
+    <input type="choice" presence="always" name="Quality of Op. Status Info" key="Operational_status_quality" category="HOT | Operator" delete_if_empty="true">
       <choice value="reported" text="reported"/>
       <choice value="confirmed" text="confirmed"/>
       <choice value="unspecified" text="unspecified"/>
     </input>
 </inputSet>
 <inputSet id="HOT Source">
-    <input type="freetext" category="HOT | Source" key="geometry_source_name" presence="onTagMatch" name="Geometry Source Name" description=""/>
-    <input type="freetext" category="HOT | Source" key="geometry_source_type" presence="onTagMatch" name="Geometry Source Type" description=""/>
-    <input type="freetext" category="HOT | Source" key="geometry_source_date" presence="onTagMatch" name="Geometry Source Date" description=""/>
-    <input type="freetext" category="HOT | Source" key="attribute_source_name" presence="onTagMatch" name="Attribute Source Name" description=""/>
-    <input type="freetext" category="HOT | Source" key="attribute_source_type" presence="onTagMatch" name="Attribute Source Type" description=""/>
-    <input type="freetext" category="HOT | Source" key="attribute_source_date" presence="onTagMatch" name="Attribute Source Date" description=""/>
+    <input type="freetext" category="HOT | Source" key="Geometry_source_type" presence="onTagMatch" name="Geometry Source Type" description=""/>
+    <input type="freetext" category="HOT | Source" key="Geometry_source_date" presence="onTagMatch" name="Geometry Source Date" description=""/>
+    <input type="freetext" category="HOT | Source" key="Attribute_source_type" presence="onTagMatch" name="Attribute Source Type" description=""/>
+    <input type="freetext" category="HOT | Source" key="Attribute_source_date" presence="onTagMatch" name="Attribute Source Date" description=""/>
     <input type="freetext" category="HOT | Source" presence="onTagMatch" name="Source" key="source" description="The primary source of information for this object (GPS, survey, Yahoo, ...)" priority="lowest"/>
     <input type="freetext" category="HOT | Source" presence="onTagMatch" description="Official designation or classification" name="Designation" key="designation"/>
 </inputSet>
@@ -746,29 +724,18 @@ Quick documentation:
     <input type="freetext" category="HOT | Operator" key="camp_management_agency_name" presence="onTagMatch" name="i02. Camp Management Agency Name" description=""/>
 	<inputSet ref="HOT Operating Institution" />
 </inputSet>
-<inputSet id="HOT IDP Contact Information">
-	<inputSet ref="HOT Contact Information" />
-    <input type="choice" presence="always" name="r1. Has Camp Resident committee?" key="idp:hascampresidentcommittee" category="HOT | Contacts" delete_if_empty="true">
-      <choice value="yes" text="yes"/>
-      <choice value="no" text="no"/>
-      <choice value="unspecified" text="unspecified"/>
-    </input>
-	<input type="freetext" category="HOT | Contacts" key="idp:resident_contact_person" presence="onTagMatch" name="r2. Residents Contact Person" description=""/>
-	<input type="freetext" category="HOT | Contacts" key="idp:resident_phonebusiness" presence="onTagMatch" name="r3. Residents Committee Phone - Business" description=""/>
-	<input type="freetext" category="HOT | Contacts" key="idp:resident_phoneemergency" presence="onTagMatch" name="r4. Residents Committee Phone - Emergency" description=""/>
-	<input type="freetext" category="HOT | Contacts" key="idp:resident_email" presence="onTagMatch" name="r5. Residents Committee Email" description=""/>
-	<input type="freetext" category="HOT | Contacts" key="idp:resident_fax" presence="onTagMatch" name="r6. Residents Committee Fax" description=""/>
-</inputSet>
 <inputSet id="HOT IDP Organisation">
-    <input type="choice" presence="always" name="i01. IDP Camp Type" key="idp:camp_type" category="HOT | IDP Camp" delete_if_empty="true">
+    <input type="choice" presence="always" name="i00. HOT => Select camp=yes" key="camp" category="HOT | IDP Camp" delete_if_empty="false">
+      <choice value="yes" text="yes"/>
+    </input>
+    <input type="choice" presence="always" name="i01. Type of Settlement" key="settlement_type" category="HOT | IDP Camp" delete_if_empty="true">
       <choice value="spontaneous_camp" text="Spontaneous camp"/>
       <choice value="organized_camp" text="Organized camp"/>
       <choice value="unspecified" text="unspecified"/>
     </input>
-    <input type="freetext" category="HOT | IDP Camp" key="place:area_population" presence="onTagMatch" name="i02. Population Estimates in Area" description=""/>
-    <input type="freetext" category="HOT | IDP Camp" key="idp:camp_population_ind" presence="onTagMatch" name="i03. Population Estimates in Site - Indviduals" description=""/>
-    <input type="freetext" category="HOT | IDP Camp" key="idp:camp_population_hou" presence="onTagMatch" name="i04. Population Estimates in Site - Households" description=""/>
-    <input type="freetext" category="HOT | IDP Camp" key="idp:camp_area_estimate" presence="onTagMatch" name="i05. Camp area estimate" description=""/>
+    <input type="freetext" category="HOT | IDP Camp" key="pop_estimates_area" presence="onTagMatch" name="i02. Population Estimates in Area" description=""/>
+    <input type="freetext" category="HOT | IDP Camp" key="pop_estimates_site_ind" presence="onTagMatch" name="i03. Population Estimates in Site - Indviduals" description=""/>
+    <input type="freetext" category="HOT | IDP Camp" key="pop_estimates_site_hou" presence="onTagMatch" name="i04. Population Estimates in Site - Households" description=""/>
     <input type="choice" presence="always" name="i06. Camp Registered?" key="camp_registered" category="HOT | IDP Camp" delete_if_empty="true">
       <choice value="yes" text="yes"/>
       <choice value="no" text="no"/>
@@ -782,69 +749,17 @@ Quick documentation:
     </input>
     <input type="freetext" category="HOT | IDP Camp" key="camp_assessment_agency_name" presence="onTagMatch" name="i09. Camp Assessment Agency Name" description=""/>
 </inputSet>
-<inputSet id="HOT IDP Conditions">
-    <input type="choice" presence="always" name="i10. IDP¨camp condition" key="idp:camp_condition" category="HOT | IDP Camp" delete_if_empty="true">
-      <choice value="tents" text="tents"/>
-      <choice value="sheets" text="Sheets"/>
-      <choice value="none" text="None"/>
-      <choice value="unspecified" text="unspecified"/>
-    </input>
-    <input type="choice" presence="always" name="i11. IDP¨camp structural safety" key="idp:camp_structural_safety" category="HOT | IDP Camp" delete_if_empty="true">
-      <choice value="open_area" text="Open area"/>
-      <choice value="25%_enclosed_area" text="25% Enclosed area"/>
-      <choice value="50%_enclosed_area" text="50% Enclosed area"/>
-      <choice value="75%_enclosed_area" text="75% Enclosed area"/>
-      <choice value="fully_enclosed_area" text="Fully enclosed area"/>
-      <choice value="non_enclosed_area" text="Non enclosed area"/>
-      <choice value="enclosed_building" text="Enclosed building"/>
-      <choice value="unspecified" text="unspecified"/>
-    </input>
-    <input type="choice" presence="always" name="i12. IDP¨drainage type" key="idp:drainage_type" category="HOT | IDP Camp" delete_if_empty="true">
-      <choice value="existing_functioning_drains" text="Existing functioning drains"/>
-      <choice value="Existing blocked drains" text="existing blocked drains"/>
-      <choice value="non_existing_drains" text="non_existing_drains"/>
-      <choice value="site_in_a_depression" text="site_in_a_depression"/>
-      <choice value="unspecified" text="unspecified"/>
-    </input>
-    <input type="choice" presence="always" name="i13. Surrounding structures at risk?" key="idp:risk_collapse" category="HOT | IDP Camp" delete_if_empty="true">
-      <choice value="yes" text="yes"/>
-      <choice value="no" text="no"/>
-      <choice value="unspecified" text="unspecified"/>
-    </input>
-</inputSet>
-<inputSet id="HOT Water Source">
-    <input type="choice" presence="always" name="w1. Susteined access to potable water" key="idp:water_access" category="HOT | Conditions" delete_if_empty="true">
-      <choice value="grey_water" text="grey_water"/>
-      <choice value="drinking_water" text="drinking_water"/>
-      <choice value="industrial_water" text="industrial_water"/>
-      <choice value="unspecified" text="unspecified"/>
-    </input>
-    <input type="choice" presence="always" name="w2. Waterpoint Type" key="idp:waterpoint_type" category="HOT | Conditions" delete_if_empty="true">
+<inputSet id="HOT WaterPoint">
+    <input type="choice" presence="always" name="w2. Waterpoint Type" key="waterpoint_type" category="HOT | Water" delete_if_empty="true">
       <choice value="tap" text="tap"/>
       <choice value="well" text="well"/>
       <choice value="tank" text="tank"/>
       <choice value="bladder" text="bladder"/>
       <choice value="unspecified" text="unspecified"/>
     </input>
-    <input type="choice" presence="always" name="w3. Water quality issue" key="water_quality_issue" category="HOT | Conditions" delete_if_empty="true">
-      <choice value="yes" text="Yes"/>
-      <choice value="no" text="No"/>
-    </input>
-    <input type="choice" presence="always" name="w4. Pump Type" key="pump_type" category="HOT | Conditions" delete_if_empty="true">
-      <choice value="manual" text="manual"/>
-      <choice value="powered_network" text="powered_network"/>
-      <choice value="powered_solar" text="powered_solar"/>
-      <choice value="powered_wind" text="powered_wind"/>
-      <choice value="powered_fuel" text="powered_fuel"/>
-      <choice value="powered_hydraulic" text="powered_hydraulic"/>
-      <choice value="unspecified" text="unspecified"/>
-    </input>
-    <input type="freetext" category="HOT | Conditions" key="average_waiting_time" presence="onTagMatch" name="w5. Average Waiting Time" description=""/>
-    <input type="freetext" category="HOT | Conditions" key="fee" presence="onTagMatch" name="w6. Fee" description=""/>
 </inputSet>
 <inputSet id="HOT IDP Camp Site">
 	<inputSet ref="HOT IDP Organisation"/>
-	<inputSet ref="HOT IDP Conditions" />
 </inputSet>
 <inputSet id="HOT School">
     <input type="freetext" category="HOT | School" key="scolar_district" presence="onTagMatch" name="School District" description=""/>
@@ -864,37 +779,35 @@ Quick documentation:
       <choice value="Science - observatoire" text="Science - observatoire"/>
       <choice value="Science - station scientifique" text="Science - station scientifique"/>
       <choice value="Other (specify in Notes)" text="Other (specify in Notes)"/>
-	<!-- HOT REFS -->
-	<inputSet ref="HOT ID" />
-	<inputSet ref="HOT Address" />
-	<inputSet ref="HOT Spatial Signature" />
-	<inputSet ref="HOT Operating Institution" />
-	<inputSet ref="HOT Contact Information" />
-	<inputSet ref="HOT  School" />
-	<inputSet ref="HOT Operational_status" />
-	<inputSet ref="HOT Source" />
     </input>
 </inputSet>
 <inputSet id="HOT Health Facility Type">
     <input type="choice" presence="always" name="h1. Type of Health Facility" key="hfac_type" category="HOT | Health Facility" delete_if_empty="true">
-      <choice value="specialized_hopital" text="Specialized_Hopital"/>
-      <choice value="hospital" text="Hospital"/>
-      <choice value="field_hospital" text="Field Hospital"/>
-      <choice value="cs_health_center" text="CS-Health_center"/>
-      <choice value="cal-health_center_with_beds" text="CAL-Health_center_with_beds"/>
-      <choice value="csl-health_center_without_beds" text="CSL-Health_center_without_beds"/>
-      <choice value="dispensary" text="Dispensary"/>
-      <choice value="other_type_of_health_facility" text="Other_type_of_health_facility"/>
-      <choice value="unknown_type_of_facility" text="Unknown_type_of_facility"/>
-      <choice value="unspecified" text="Unspecified"/>
+      <choice value="Specialized_Hopital" text="Specialized_Hopital"/>
+      <choice value="Hospital" text="Hospital"/>
+      <choice value="Field Hospital" text="Field Hospital"/>
+      <choice value="CS-Health_center" text="CS-Health_center"/>
+      <choice value="CAL-Health_center_with_beds" text="CAL-Health_center_with_beds"/>
+      <choice value="CSL-Health_center_without_beds" text="CSL-Health_center_without_beds"/>
+      <choice value="Dispensary" text="Dispensary"/>
+      <choice value="Other_type_of_health_facility" text="Other_type_of_health_facility"/>
+      <choice value="Unknown_type_of_facility" text="Unknown_type_of_facility"/>
+      <choice value="Unspecified" text="Unspecified"/>
     </input>
-    <input type="freetext" category="HOT | Health Facility" key="organization_name" presence="onTagMatch" name="h2. Name of the Organization Responsible for Health Facility" description=""/>
-    <input type="freetext" category="HOT | Health Facility" key="hfac_medical_service_description" presence="onTagMatch" name="h3. Medical Service Description" description=""/>
-    <input type="freetext" category="HOT | Health Facility" key="hfac_construction_description" presence="" name="h4. Construction" description=""/>
-    <input type="freetext" category="HOT | Health Facility" key="hfac_capacity_description" presence="" name="h5. Capacity Description" description=""/>
-    <input type="freetext" category="HOT | Health Facility" key="hfac_beds" presence="" name="h6. Number of beds" description=""/>
-    <input type="freetext" category="HOT | Health Facility" key="hfac_current_floor_space_use" presence="" name="h7. Floor surface used in the structure" description=""/>
-    <input type="freetext" category="HOT | Health Facility" key="hfac_max_floor_space_use" presence="" name="h8. Maximum floor surface used in the structure" description=""/>
+    <input type="freetext" category="HOT | Health Facility" key="Organization_Name" presence="onTagMatch" name="h2. Name of the Organization Responsible for Health Facility" description=""/>
+    <input type="choice" presence="always" name="Type of Organization Responsible for Health Facility" key="Humanitarian:HealthFacility:OrganizationType" category="h3. Health Facility" delete_if_empty="true">
+      <choice value="government_facility-public" text="government_facility-public"/>
+      <choice value="government_facility-not_public" text="government_facility-not_public"/>
+      <choice value="private_for_profit" text="private_for_profit"/>
+      <choice value="Faith-based_organization_(FBO)" text="Faith-based_organization_(FBO)"/>
+      <choice value="NGO_other_than_faith-based" text="NGO_other_than_faith-based"/>
+      <choice value="Community" text="Community"/>
+      <choice value="Unspecified" text="Unspecified"/>
+    </input>
+    <input type="freetext" category="Health Facility" key="HealthFacilityConstructionDescription" presence="onTagMatch" name="Construction Description" description=""/>
+    <input type="freetext" category="Health Facility" key="HealthFacilityServiceDescription" presence="onTagMatch" name="Service Description" description=""/>
+    <input type="freetext" category="Health Facility" key="HealthFacilityCapacityDescription" presence="onTagMatch" name="Capacity Description" description=""/>
+    <input type="freetext" category="Health Facility" key="HealthFacilityCapacityBeds" presence="onTagMatch" name="Number of Beds" description=""/>
 </inputSet>
 <inputSet id="HOT Electricy network">
     <input type="choice" presence="always" name="Classe" key="classe" category="HOT | Electricy network" delete_if_empty="true">
@@ -917,13 +830,13 @@ Quick documentation:
     </input>
 </inputSet>
 <inputSet id="HOT Surface">
-    <input type="choice" presence="always" name="2. Road Surface" key="surface" category="HOT | Transport " delete_if_empty="true">
+    <input type="choice" presence="always" name="2. Road Surface" key="Surface" category="HOT | Transport " delete_if_empty="true">
       <choice value="Paved" text="Paved"/>
       <choice value="Gravel" text="Gravel"/>
       <choice value="Dirt/Sand" text="Dirt/Sand"/>
       <choice value="Unspecified" text="Unspecified"/>
     </input>
-    <input type="choice" presence="always" name="3. Surface Condition" key="surfacecondition" category="HOT | Transport " delete_if_empty="true">
+    <input type="choice" presence="always" name="3. Surface Condition" key="SurfaceCondition" category="HOT | Transport " delete_if_empty="true">
       <choice value="Rough_less_than_40kph" text="Rough_less_than_40kph"/>
       <choice value="Smooth_greater_than_40kph" text="Smooth_greater_than_40kph"/>
       <choice value="Snow/Ice" text="Snow/Ice"/>
@@ -942,13 +855,9 @@ Quick documentation:
       <choice value="roadblock" text="roadblock"/>
       <choice value="unspecified" text="unspecified"/>
     </input>
-	<input type="choice" presence="always" name="6. Transport Obstacle has bypass ?" key="barrier:bypass" category="HOT | Transport " delete_if_empty="true">
-      <choice value="yes" text="Yes"/>
-      <choice value="no" text="No"/>
-    </input>
 </inputSet>
 <inputSet id="HOT Practicability">
-    <input type="choice" presence="always" name="5. Obstacle Practicability" key="practicability" category="HOT | Transport " delete_if_empty="true">
+    <input type="choice" presence="always" name="5. Obstacle Practicability" key="Practicability" category="HOT | Transport " delete_if_empty="true">
       <choice value="non_motorized" text="Passable by non-motorized transport"/>
       <choice value="motorbike" text="Passable by motorbike"/>
       <choice value="4wd_less_than_3.5mt" text="Passable for 4 wheel drive up to 3.5 metric tons"/>
@@ -967,15 +876,6 @@ Quick documentation:
 <inputSet id="Hot Railway conditions">
 	<inputSet ref="HOT Transport Obstacles" />
 	<inputSet ref="HOT Practicability" />
-</inputSet>
-<inputSet id="HOT Hazards">
-    <input type="choice" presence="always" name="Hazard" key="natural" category="HOT | Hazards" delete_if_empty="true">
-      <choice value="floods" text="floods"/>
-      <choice value="standing_water" text="standing_water"/>
-      <choice value="water" text="water"/>
-      <choice value="landslide" text="landslide"/>
-      <choice value="mud" text="mud"/>
-    </input>
 </inputSet>
 
 <!-- End InputSets specific to HOT  -->
@@ -996,9 +896,6 @@ Quick documentation:
   <include file="map_features/buildings.xml" /> <!-- a bit of a dumping ground, includes sports centre, shopping centre, hospital... --> 
   <include file="map_features/man_made.xml" />  
   <include file="map_features/Humanitarian_Features.xml" />  
-  <include file="map_features/Humanitarian_Features_Common_Tags.xml" />  
-  <include file="map_features/IOM_Kiosk_Humanitarian_Features.xml" />  
-
   <!-- Relations -->
   <feature name="Multipolygon">
     <category>advanced</category>

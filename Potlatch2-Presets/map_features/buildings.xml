@@ -1,5 +1,5 @@
 <featureGroup>
-	<!-- moved in humanitarian.xml
+<!--
   <feature name="School">
     <category>buildings</category>
     <icon image="features/pois/education_school.n.24.png">
@@ -14,8 +14,7 @@
     <inputSet ref="buildingAddress"/>
     <inputSet ref="common"/>
   </feature>
-	-->
-
+-->
   <feature name="College">
     <category>buildings</category>
     <icon image="features/pois/education_university.n.24.png">
@@ -158,14 +157,14 @@
     <inputSet ref="common"/>
   </feature>
 
-	<!-- integrated in humnanitarian_features
+<!--
   <feature name="Hospital">
     <category>buildings</category>
     <icon image="features/pois/health_hospital.n.24.png">
       <b>${name} ${addr:housename}</b><br/>
       ${addr:housenumber} ${addr:street} ${addr:postcode}
     </icon>
-    <line/>
+
     <area/>
     <tag k="amenity" v="hospital"/>
     <inputSet ref="names"/>
@@ -173,7 +172,7 @@
     <inputSet ref="isBuilding"/>
     <inputSet ref="common"/>
   </feature>
-	-->
+-->
 
 
   <feature name="Museum">

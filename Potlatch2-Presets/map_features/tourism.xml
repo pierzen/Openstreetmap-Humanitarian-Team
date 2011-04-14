@@ -47,7 +47,7 @@
     <inputSet ref="common"/>
   </feature>
 
-	<!-- integrated in humanitarian_features idp_camp
+
   <feature name="Campsite">
     <category>accommodation</category>
     <point/>
@@ -57,7 +57,7 @@
     <tag k="tourism" v="camp_site"/>
     <inputSet ref="common"/>
   </feature>
-	-->
+
 
   <feature name="Caravan park">
     <category>accommodation</category>

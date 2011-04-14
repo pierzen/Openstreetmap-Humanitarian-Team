@@ -60,12 +60,6 @@
     </input>
     <inputSet ref="nameAndRef" />
     <inputSet ref="common"/>
-  <!-- HOT REFS -->
-	<inputSet ref="HOT Water" />
-	<inputSet ref="HOT Operational_status" />
-	<inputSet ref="HOT Operating Institution" />
-	<inputSet ref="HOT Contact Information" />
-	<inputSet ref="HOT Source" />
   </feature>
 </featureGroup>  
 

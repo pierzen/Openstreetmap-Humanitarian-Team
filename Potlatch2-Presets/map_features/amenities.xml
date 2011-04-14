@@ -36,7 +36,7 @@
     <inputSet ref="common"/>
   </feature>
 
-	<!-- integrated in humnanitarian_features
+
   <feature name="Hospital">
     <category>amenity</category>
     <icon image="features/pois/health_hospital.n.24.png"/>
@@ -51,7 +51,6 @@
     </input>
     <inputSet ref="common"/>
   </feature>
-  -->
 
 
   <feature name="Place of Worship">
@@ -115,7 +114,7 @@
     <inputSet ref="common"/>
   </feature>
 
-	<!-- integrated in school humanitarian_features.xml
+
   <feature name="School">
     <category>amenity</category>
     <icon image="features/pois/education_school.n.24.png">
@@ -128,7 +127,7 @@
     <inputSet ref="buildingAddress"/>
     <inputSet ref="common"/>
   </feature>
-	-->
+
   <feature name="Kindergarten">
     <category>amenity</category>
     <category>buildings</category>
@@ -207,7 +206,7 @@
     <tag k="amenity" v="toilets"/>
     <inputSet ref="common"/>
   </feature>
-	<!-- integrated in waterpoint humanitarian_features.xml
+
   <feature name="Water fountain">
     <category>amenity</category>
     <category>foodanddrink</category>
@@ -218,8 +217,7 @@
     <tag k="amenity" v="drinking_water"/>
     <inputSet ref="common"/>
   </feature>
-	-->
-	
+
   <feature name="Shelter">
     <category>amenity</category>
     <icon image="features/pois/accommodation_shelter2.n.24.png">
